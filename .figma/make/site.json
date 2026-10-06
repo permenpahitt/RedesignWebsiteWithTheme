@@ -1,0 +1,10 @@
+{
+  "description": "This web application offers a visually captivating platform that embodies the theme of connection while incorporating elements of wanderlust, appealing to adventurous users.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
