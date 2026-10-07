@@ -144,7 +144,7 @@ export function CompassPeak() {
         <Mountains className="absolute bottom-0 w-[160%] -translate-x-[10%] opacity-50" style={{ transform: `translate(-10%, ${rel * 0.25}px)` }} />
         <Mountains className="absolute -bottom-10 w-[130%] -translate-x-[5%] opacity-80" style={{ transform: `translate(-5%, ${rel * 0.12}px) scaleX(-1)` }} />
       </div>
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-7xl">
         <div className="relative">
           <BiomeTitle kicker="Pos 05 · Puncak Kompas" title={<>Kenali<br />Arahmu</>} sub="Sebelum memilih rute, kenali dulu kompas di dalam dirimu." />
           <Observatory className="absolute -top-6 right-0 hidden w-48 lg:block" />

@@ -50,7 +50,7 @@ export function Harbor() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-8">
         <p className="mb-4 font-display text-xs font-extrabold tracking-[.3em] text-navy uppercase">Expo Kampus · SMA Negeri 1 Candimulyo, Magelang</p>
         <h1
-          className="relative font-display text-[clamp(3rem,13.5vw,15rem)] leading-[.8] font-black tracking-[-.04em] text-white"
+          className="relative font-display text-[clamp(3rem,11vw,12rem)] leading-[.8] font-black tracking-[-.04em] text-white"
           style={{ textShadow: "0 6px 0 #0b1d33" }}
         >
           SAMBANDHA
@@ -216,7 +216,7 @@ export function DeepSea({ chest }: { chest: ReactNode }) {
               <p className="font-display text-xs font-extrabold tracking-[.3em] text-royal uppercase">Legenda Peta</p>
               <div className="mt-6 space-y-6 text-lg leading-relaxed text-navy">
                 <p>
-                  <span className="float-left mr-3 font-display text-7xl leading-[.8] font-black text-coral">S</span>
+                  <span className="float-left mr-3 font-display text-5xl leading-[.8] font-black text-coral">S</span>
                   <strong>ambandha</strong> berasal dari bahasa Sanskerta yang berarti <em>ikatan</em>, <em>hubungan</em>, atau <em>koneksi</em>. Itulah benang merah yang kamu lihat menjalar dari atas
                   sampai bawah halaman ini.
                 </p>
