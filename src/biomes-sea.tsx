@@ -133,7 +133,7 @@ export function OpenSea() {
                   className={`mx-auto grid aspect-square max-w-[220px] place-items-center rounded-full border-[6px] border-double bg-navy/40 p-2 sm:p-4 text-center opacity-90 ${s.c}`}
                   style={{ transform: `rotate(${s.r}deg)` }}
                 >
-                  <div className="rounded-full border-2 border-current p-3 sm:p-6">
+                  <div className="grid aspect-square place-items-center rounded-full border-2 border-current p-3 sm:p-6">
                     <div className="font-display text-3xl font-black sm:text-6xl">{s.big}</div>
                     <div className="mt-1 font-display text-[10px] font-extrabold tracking-[.2em] uppercase">{s.small}</div>
                   </div>
