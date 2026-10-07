@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { AnchorLogo, Cairn, Cloud, Coral, Fish, Gull, Lighthouse, Pin, Ship, Signpost, WaveBand, Squiggle } from "./art";
-import { ROUTES, ROUTES_INTRO, SCHEDULE, SCHOOL, SHARE_URL, COUNTDOWN_TARGET, KEDINASAN, ALT_CARDS, ALT_INTRO, ALT_WARNING, WORK, WORK_INTRO, WORK_NOTE, type Route } from "./data";
+import { ROUTES, ROUTES_INTRO, SCHEDULE, SCHOOL, SHARE_URL, COUNTDOWN_TARGET, KEDINASAN, ALT_CARDS, ALT_INTRO, ALT_WARNING, WORK, WORK_INTRO, WORK_NOTE, ALUMNI, CAMPUSES, type Route } from "./data";
 import { BiomeTitle, ExtLink, Hand, Icon, Modal, Reveal, linkPill, rich, useCountdown, useReduced, useScrollY } from "./ui";
 
 export function HiddenChest({ id, onFind, found, className = "" }: { id: number; onFind: (id: number) => void; found: boolean; className?: string }) {
@@ -112,8 +112,8 @@ export function Harbor() {
 
 /* ───────── 2 · LAUT LEPAS ───────── */
 const STAMPS = [
-  { big: "24", small: "Navigator Alumni", r: -8, c: "text-coral border-coral" },
-  { big: "15+", small: "Kampus Tujuan", r: 5, c: "text-sun border-sun" },
+  { big: String(ALUMNI.length), small: "Navigator Alumni", r: -8, c: "text-coral border-coral" },
+  { big: String(CAMPUSES.length), small: "Kampus Tujuan", r: 5, c: "text-sun border-sun" },
   { big: "4", small: "Rute Masuk", r: -3, c: "text-white border-white" },
   { big: "1995", small: "Est. · Candimulyo", r: 9, c: "text-coral border-coral" },
 ];
