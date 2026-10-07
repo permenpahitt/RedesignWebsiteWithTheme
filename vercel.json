@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/sambandha-smanca/:path*", "destination": "/:path*" }
+  ]
+}
