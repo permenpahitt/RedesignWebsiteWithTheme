@@ -505,11 +505,18 @@ export const ALUMNI: Alumnus[] = [
       "Apa pun tujuanmu setelah lulus SMA — entah mau gap year dulu, kerja, kedinasan, kuliah, membangun bisnis, menikah, dll — apa pun itu kamu harus bisa bertanggung jawab atas tujuanmu sendiri. Karena yang akan menjalani dan menikmatinya kelak adalah dirimu sendiri, bukan temanmu, gurumu, saudaramu, bahkan orangtuamu. Jangan takut gagal; semisal kamu gagal, teruslah mencoba. Kalau kamu capek, istirahatlah sebentar, lalu setelah kamu pulih lanjutkan lagi sampai kamu berhasil mendapatkan apa yang kamu inginkan. Ingat, kamu masih muda dan jalanmu masih panjang. Enjoy your life. Salam sehat dari saya, Nopal, alumni SMANCA angkatan 25.",
   },
   { name: "Doni Aditiya Priatmoko", uni: "Universitas Gadjah Mada", fakultas: "Sekolah Vokasi", jurusan: "Manajemen dan Penilaian Properti", year: "2025", status: "Mahasiswa", kontak: "instagram: @doniadtya__", salam: "Hidup cuma sekali, tidak bisa diulangi." },
+  { name: "Lintang Christiane Mahanani", uni: "Universitas Tidar", fakultas: "Ekonomi", jurusan: "Pariwisata", year: "2026", status: "Mahasiswa", kontak: "@lintgchr", salam: "nothing is impossible." },
+  { name: "Chalisa Putri", uni: "Poltekkes Kemenkes Semarang", fakultas: "Keperawatan", jurusan: "Keperawatan", year: "2023", status: "Mahasiswa", kontak: "chh.ptrii", salam: "Jangan takut tidak bisa beradaptasi, jangan takut tertinggal. Kami di sini akan selalu merangkulmu sejak awal perjalanan hebatmu dimulai. Keep fighting!" },
+  { name: "Nugraheni Puri Widiastuti", uni: "Universitas Muhammadiyah Magelang", fakultas: "Fakultas Keguruan dan ilmu pendidikan", jurusan: "Pendidikan Guru Sekolah Dasar", year: "2026", status: "Mahasiswa", kontak: "", salam: "Semangat ya buat apa yang sudah kalian impikan dan jangan pernah meremehkan proses dan hasil milik orang lain." },
+  { name: "Salsabila Eka Cahyani", uni: "UNY", fakultas: "FISIP", jurusan: "Pend. Sosiologi", year: "2025", status: "Mahasiswa", kontak: "@sabilaeya", salam: "semangat semuanya" },
+  { name: "Andra Eka Cahyono", uni: "Universitas Tidar", fakultas: "Fakultas Ekonomi", jurusan: "S1 Pariwisata", year: "2026", status: "Mahasiswa", kontak: "Nomor whatsapp: 085848805629 Instagram: andraekacahyono", salam: "Untuk adik-adik SMA, jangan takut untuk bermimpi besar dan jangan mudah menyerah dalam mengejar masa depan." },
+  { name: "Annida 'Ilva 'Arifillah", uni: "Universitas Tidar", fakultas: "Ekonomi", jurusan: "S1 Akuntansi", year: "2025", status: "Mahasiswa", kontak: "Wa: 085725918419 Ig: marchdaegulva_", salam: "Semangat besok dapet biru/barcode" },
 ];
 
 // Pin kampus di peta gabus (posisi % ilustratif, bukan skala).
 export const CAMPUSES = [
   { key: "UNTIDAR", full: "Universitas Tidar", label: "Untidar", city: "Magelang", x: 44, y: 52, match: ["tidar"] },
+  { key: "UMMAGELANG", full: "Universitas Muhammadiyah Magelang", label: "UMMagelang", city: "Magelang", x: 38, y: 48, match: ["muhammadiyah"] },
   { key: "UGM", full: "Universitas Gadjah Mada", label: "UGM", city: "Yogyakarta", x: 47, y: 74, match: ["gadjah"] },
   { key: "UPNVY", full: 'UPN "Veteran" Yogyakarta', label: "UPNVY", city: "Yogyakarta", x: 39, y: 82, match: ["upnvy"] },
   { key: "UNY", full: "Universitas Negeri Yogyakarta", label: "UNY", city: "Yogyakarta", x: 55, y: 84, match: ["uny"] },
