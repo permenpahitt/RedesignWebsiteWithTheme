@@ -117,7 +117,7 @@ export function BiomeTitle({ kicker, title, sub, light = true }: { kicker: strin
         {kicker}
       </p>
       <h2
-        className={`relative z-10 font-display text-[clamp(2.6rem,9vw,7.5rem)] break-words leading-[.86] font-black tracking-tight uppercase ${light ? "text-white" : "text-navy"}`}
+        className={`relative z-10 font-display text-[clamp(2rem,7vw,6rem)] break-words leading-[.86] font-black tracking-tight uppercase ${light ? "text-white" : "text-navy"}`}
         style={light ? { textShadow: "0 4px 0 #0b1d33" } : undefined}
       >
         {title}
