@@ -91,7 +91,7 @@ export function Harbor() {
           </div>
         </div>
         <div className="absolute right-[5%] bottom-[2%] w-[min(22vw,190px)]">
-          <div className="anim-beam pointer-events-none absolute top-[9%] left-1/2 h-24 w-[60vw] max-w-[700px] origin-left -translate-y-1/2 bg-gradient-to-r from-sun/70 to-transparent [clip-path:polygon(0_45%,100%_0,100%_100%,0_55%)]" />
+          <div className="anim-beam-l pointer-events-none absolute top-[18.3%] right-1/2 h-24 w-[60vw] max-w-[700px] origin-right -translate-y-1/2 bg-gradient-to-l from-sun/70 to-transparent [clip-path:polygon(100%_45%,0_0,0_100%,100%_55%)]" />
           <Lighthouse className="relative w-full" />
         </div>
         {[
