@@ -291,7 +291,7 @@ const SMANCA_M = { x: 30, y: 40 };
 const MOBILE_POS: Record<string, { x: number; y: number }> = {
   UNTIDAR: { x: 56, y: 44 }, UGM: { x: 42, y: 66 }, UPNVY: { x: 18, y: 76 }, UNY: { x: 66, y: 78 }, UNS: { x: 80, y: 60 },
   UNDIP: { x: 54, y: 22 }, UNNES: { x: 22, y: 16 }, POLTEKKES: { x: 82, y: 32 }, ITS: { x: 84, y: 46 }, PIP: { x: 80, y: 10 },
-  UMMAGELANG: { x: 28, y: 60 },
+  UMMAGELANG: { x: 20, y: 56 },
 };
 function useMobile() {
   const q = "(max-width: 639px)";
