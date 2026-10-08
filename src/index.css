@@ -64,6 +64,14 @@ body { background: #0b1d33; color: #0b1d33; font-family: var(--font-sans); overf
 @keyframes bubble { 0% { transform: translateY(0) scale(.6); opacity: 0; } 15% { opacity: .8; } 100% { transform: translateY(-110vh) scale(1.1); opacity: 0; } }
 @keyframes swim { 0% { transform: translateX(-20vw) scaleX(-1); } 49% { transform: translateX(110vw) scaleX(-1); } 50% { transform: translateX(110vw) scaleX(1); } 100% { transform: translateX(-20vw) scaleX(1); } }
 @keyframes rain { from { transform: translateY(-20vh); } to { transform: translateY(120vh); } }
+@keyframes firefly-glow { 0%,100% { opacity: .15; transform: scale(.6); } 50% { opacity: 1; transform: scale(1.15); } }
+@keyframes firefly-fly {
+  0% { transform: translate(0,0); }
+  20% { transform: translate(var(--fx1), var(--fy1)); }
+  45% { transform: translate(var(--fx2), var(--fy2)); }
+  70% { transform: translate(var(--fx3), var(--fy3)); }
+  100% { transform: translate(0,0); }
+}
 @keyframes firefly { 0%,100% { transform: translate(0,0); opacity: .2; } 25% { opacity: 1; } 50% { transform: translate(30px,-40px); opacity: .5; } 75% { transform: translate(-20px,-10px); opacity: 1; } }
 @keyframes beam { 0%,100% { transform: rotate(-28deg); opacity: .55; } 50% { transform: rotate(18deg); opacity: .9; } }
 @keyframes flame { 0%,100% { transform: scaleY(1) skewX(0); } 33% { transform: scaleY(1.12) skewX(3deg); } 66% { transform: scaleY(.92) skewX(-3deg); } }
@@ -89,8 +97,5 @@ body { background: #0b1d33; color: #0b1d33; font-family: var(--font-sans); overf
 .reveal { opacity: 0; transform: translateY(40px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
 .reveal.in { opacity: 1; transform: none; }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .reveal { opacity: 1; transform: none; }
-}
+.firefly { position: absolute; pointer-events: none; animation: firefly-fly var(--dur) ease-in-out var(--delay) infinite; will-change: transform; }
+.firefly > i { display: block; border-radius: 9999px; width: var(--size); height: var(--size); background: radial-gradient(circle, #fffbe0 0 25%, #ffd93d 55%, transparent 72%); box-shadow: 0 0 10px 3px rgba(255,217,61,.65), 0 0 26px 8px rgba(255,217,61,.25); animation: firefly-glow var(--blink) ease-in-out var(--delay) infinite; }

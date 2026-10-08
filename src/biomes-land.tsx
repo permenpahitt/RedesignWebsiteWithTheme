@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type FormEvent, type ReactNode } from "react";
 import { Bottle, Campfire, Chest, CompassRose, Lantern, Mountains, Observatory, Pin } from "./art";
 import {
   ALUMNI, BOOKS, BOOK_NOTE, CAMPUSES, FAQ, MENFESS_NORMS, OFFICIAL, OFFLINE, PRACTICE, PRACTICE_INTRO, SCHOLARSHIPS, SCHOLARSHIP_INTRO, SCHOLARSHIP_NOTE,
@@ -763,14 +763,31 @@ export function Campfireside({ chest }: { chest: ReactNode }) {
   return (
     <section id="perapian" data-biome="perapian" className="relative overflow-hidden px-5 py-28 sm:px-8">
       <span id="faq" />
-      {!reduced &&
-        Array.from({ length: 22 }).map((_, i) => (
-          <span
-            key={i}
-            className="pointer-events-none absolute h-1.5 w-1.5 rounded-full bg-sun shadow-[0_0_8px_2px_rgba(255,217,61,.6)]"
-            style={{ left: `${(i * 41) % 100}%`, top: `${(i * 67) % 100}%`, animation: `firefly ${5 + (i % 4)}s ease-in-out ${i * 0.4}s infinite` }}
-          />
-        ))}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        {Array.from({ length: 36 }).map((_, i) => {
+          const r = (n: number) => ((i * 9301 + n * 49297) % 233280) / 233280;
+          const v = (n: number, m: number) => `${Math.round((r(n) - 0.5) * 2 * m)}px`;
+          return (
+            <span
+              key={i}
+              className="firefly"
+              style={{
+                left: `${(i * 37 + 5) % 100}%`,
+                top: `${(i * 61 + 7) % 100}%`,
+                "--size": `${5 + Math.round(r(1) * 7)}px`,
+                "--dur": `${9 + r(2) * 9}s`,
+                "--blink": `${1.8 + r(3) * 3}s`,
+                "--delay": `-${(r(4) * 12).toFixed(1)}s`,
+                "--fx1": v(5, 90), "--fy1": v(6, 70),
+                "--fx2": v(7, 140), "--fy2": v(8, 110),
+                "--fx3": v(9, 90), "--fy3": v(10, 70),
+              } as CSSProperties}
+            >
+              <i />
+            </span>
+          );
+        })}
+      </div>
       <div className="relative mx-auto max-w-5xl">
         <div className="relative">
           <BiomeTitle kicker="Pos 08 · Perapian Cerita" title={<>Cerita<br />di Api Unggun</>} sub="Pertanyaan yang paling sering ditanyakan adik kelas, dijawab sambil menghangatkan diri." />
