@@ -334,11 +334,11 @@ function AlumniCard({ a, i }: { a: Alumnus; i: number }) {
     <article className={`paper chunky-soft relative flex h-full flex-col rounded-2xl border-4 border-navy p-5 text-navy ${i % 3 === 1 ? "rotate-[.8deg]" : i % 3 === 2 ? "-rotate-[.6deg]" : ""}`}>
       <span className="absolute -top-3 -right-2 rotate-6 rounded-lg border-2 border-navy bg-coral px-2 py-0.5 font-display text-[10px] font-black tracking-widest text-white uppercase">
         <svg viewBox="0 0 24 24" className="mr-1 inline h-3 w-3 align-[-1px]" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" /></svg>
-        {c.label}
+        {c?.label ?? a.uni}
       </span>
       <p className="font-display text-[11px] font-extrabold tracking-[.2em] text-royal uppercase">Angkatan {a.year}</p>
       <h4 className="mt-1 pr-6 font-display text-lg leading-tight font-black uppercase">{a.name}</h4>
-      <p className="mt-2 pr-2 text-sm font-semibold">{c.full} ({c.label})</p>
+      <p className="mt-2 pr-2 text-sm font-semibold">{c ? `${c.full} (${c.label})` : a.uni}</p>
       <p className="text-sm text-navy/70">
         {a.fakultas} · {a.jurusan}
       </p>

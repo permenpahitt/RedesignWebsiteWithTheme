@@ -516,7 +516,7 @@ export const ALUMNI: Alumnus[] = [
 // Pin kampus di peta gabus (posisi % ilustratif, bukan skala).
 export const CAMPUSES = [
   { key: "UNTIDAR", full: "Universitas Tidar", label: "Untidar", city: "Magelang", x: 44, y: 52, match: ["tidar", "untidar"] },
-  { key: "UMMAGELANG", full: "Universitas Muhammadiyah Magelang", label: "UMMagelang", city: "Magelang", x: 32, y: 42, match: ["muhammadiyah"] },
+  { key: "UMMAGELANG", full: "Universitas Muhammadiyah Magelang", label: "UMMagelang", city: "Magelang", x: 24, y: 38, match: ["muhammadiyah"] },
   { key: "UGM", full: "Universitas Gadjah Mada", label: "UGM", city: "Yogyakarta", x: 47, y: 74, match: ["gadjah", "gadjah mada", "ugm"] },
   { key: "UPNVY", full: 'UPN "Veteran" Yogyakarta', label: "UPNVY", city: "Yogyakarta", x: 39, y: 82, match: ["upnvy"] },
   { key: "UNY", full: "Universitas Negeri Yogyakarta", label: "UNY", city: "Yogyakarta", x: 55, y: 84, match: ["uny"] },
@@ -540,7 +540,7 @@ export function campusOf(a: Alumnus) {
       if (ml.length <= 4) return u === ml;
       return u.includes(ml);
     });
-  })!;
+  });
 }
 
 export const MENFESS_NORMS = [
