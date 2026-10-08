@@ -515,22 +515,32 @@ export const ALUMNI: Alumnus[] = [
 
 // Pin kampus di peta gabus (posisi % ilustratif, bukan skala).
 export const CAMPUSES = [
-  { key: "UNTIDAR", full: "Universitas Tidar", label: "Untidar", city: "Magelang", x: 44, y: 52, match: ["tidar"] },
+  { key: "UNTIDAR", full: "Universitas Tidar", label: "Untidar", city: "Magelang", x: 44, y: 52, match: ["tidar", "untidar"] },
   { key: "UMMAGELANG", full: "Universitas Muhammadiyah Magelang", label: "UMMagelang", city: "Magelang", x: 32, y: 42, match: ["muhammadiyah"] },
-  { key: "UGM", full: "Universitas Gadjah Mada", label: "UGM", city: "Yogyakarta", x: 47, y: 74, match: ["gadjah"] },
+  { key: "UGM", full: "Universitas Gadjah Mada", label: "UGM", city: "Yogyakarta", x: 47, y: 74, match: ["gadjah", "gadjah mada", "ugm"] },
   { key: "UPNVY", full: 'UPN "Veteran" Yogyakarta', label: "UPNVY", city: "Yogyakarta", x: 39, y: 82, match: ["upnvy"] },
   { key: "UNY", full: "Universitas Negeri Yogyakarta", label: "UNY", city: "Yogyakarta", x: 55, y: 84, match: ["uny"] },
-  { key: "UNS", full: "Universitas Sebelas Maret", label: "UNS", city: "Surakarta", x: 63, y: 62, match: ["sebelas maret"] },
+  { key: "UNS", full: "Universitas Sebelas Maret", label: "UNS", city: "Surakarta", x: 63, y: 62, match: ["sebelas maret", "uns"] },
   { key: "UNDIP", full: "Universitas Diponegoro", label: "Undip", city: "Semarang", x: 55, y: 24, match: ["diponegoro"] },
   { key: "UNNES", full: "Universitas Negeri Semarang", label: "Unnes", city: "Semarang", x: 45, y: 18, match: ["negeri semarang"] },
   { key: "POLTEKKES", full: "Poltekkes Kemenkes Semarang", label: "Poltekkes", city: "Semarang", x: 64, y: 30, match: ["poltekkes"] },
-  { key: "ITS", full: "Institut Teknologi Sepuluh Nopember", label: "ITS", city: "Surabaya", x: 84, y: 40, match: ["its"] },
+  { key: "ITS", full: "Institut Teknologi Sepuluh Nopember", label: "ITS", city: "Surabaya", x: 84, y: 40, match: ["its", "sepuluh nopember"] },
   { key: "PIP", full: "Politeknik Ilmu Pelayaran Makassar", label: "PIP", city: "Makassar", x: 93, y: 12, match: ["pip makassar"] },
 ];
 
 export function campusOf(a: Alumnus) {
-  const u = a.uni.toLowerCase();
-  return CAMPUSES.find((c) => c.match.some((m) => (m === "its" || m === "uny" ? u === m : u.includes(m))))!;
+  const u = (a.uni || "").toLowerCase().trim();
+  return CAMPUSES.find((c) => {
+    if (c.key.toLowerCase() === u) return true;
+    if (c.full.toLowerCase() === u) return true;
+    if (c.label.toLowerCase() === u) return true;
+    return c.match.some((m) => {
+      const ml = m.toLowerCase();
+      // akronim pendek (its, uny, ugm, uns, dll) harus cocok persis agar tidak false-positive
+      if (ml.length <= 4) return u === ml;
+      return u.includes(ml);
+    });
+  })!;
 }
 
 export const MENFESS_NORMS = [

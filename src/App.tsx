@@ -257,7 +257,14 @@ const SECRETS = [
 export default function App() {
   const reduced = useReduced();
   const [visited, setVisited] = useState<Set<string>>(new Set());
-  const [found, setFound] = useState<number[]>([]);
+  const [found, setFound] = useState<number[]>(() => {
+    try {
+      const saved = localStorage.getItem("sambandha_keys");
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
   const [secret, setSecret] = useState(false);
   const [fine, setFine] = useState(false);
 
@@ -284,6 +291,9 @@ export default function App() {
     if (found.includes(id)) return;
     const n = [...found, id];
     setFound(n);
+    try {
+      localStorage.setItem("sambandha_keys", JSON.stringify(n));
+    } catch {}
     if (n.length === 3) setSecret(true);
   };
   const chest = (id: number, cls: string) => <HiddenChest id={id} found={found.includes(id)} onFind={find} className={cls} />;

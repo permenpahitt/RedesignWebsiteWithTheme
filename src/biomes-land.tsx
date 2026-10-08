@@ -370,9 +370,15 @@ export function Village() {
     return m;
   }, []);
   const list = ALUMNI.filter((a) => {
-    if (camp && campusOf(a)?.key !== camp) return false;
+    const c = campusOf(a);
+    if (camp && c?.key !== camp) return false;
     const s = q.trim().toLowerCase();
-    return !s || [a.name, a.uni, a.fakultas, a.jurusan, a.year].join(" ").toLowerCase().includes(s);
+    if (!s) return true;
+    const hay = [a.name, a.uni, a.fakultas, a.jurusan, a.year, a.salam, c?.label, c?.full, c?.city]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+    return hay.includes(s);
   });
   const jump = (k: string) => {
     setCamp(camp === k ? null : k);
