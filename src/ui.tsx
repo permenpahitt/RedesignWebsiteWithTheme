@@ -12,15 +12,9 @@ export function rich(text: string) {
   );
 }
 
+// Animasi sengaja selalu aktif (desktop = mobile); setelan "reduce motion" OS tidak lagi mematikannya.
 export function useReduced() {
-  const [r, setR] = useState(() => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-  useEffect(() => {
-    const m = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const on = () => setR(m.matches);
-    m.addEventListener("change", on);
-    return () => m.removeEventListener("change", on);
-  }, []);
-  return r;
+  return false;
 }
 
 // Satu listener scroll bersama, di-throttle via rAF.
