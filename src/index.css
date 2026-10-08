@@ -74,7 +74,7 @@ body { background: #0b1d33; color: #0b1d33; font-family: var(--font-sans); overf
 }
 @keyframes firefly { 0%,100% { transform: translate(0,0); opacity: .2; } 25% { opacity: 1; } 50% { transform: translate(30px,-40px); opacity: .5; } 75% { transform: translate(-20px,-10px); opacity: 1; } }
 @keyframes beam { 0%,100% { transform: rotate(-28deg); opacity: .55; } 50% { transform: rotate(18deg); opacity: .9; } }
-@keyframes beam-l { 0%,100% { transform: translateY(-50%) rotate(20deg); opacity: .55; } 50% { transform: translateY(-50%) rotate(-12deg); opacity: .9; } }
+@keyframes beam-l { 0%,100% { transform: translateY(-50%) rotate(-3deg); opacity: .55; } 50% { transform: translateY(-50%) rotate(3deg); opacity: .9; } }
 @keyframes flame { 0%,100% { transform: scaleY(1) skewX(0); } 33% { transform: scaleY(1.12) skewX(3deg); } 66% { transform: scaleY(.92) skewX(-3deg); } }
 @keyframes wave-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes stamp-in { 0% { transform: scale(2.4) rotate(-20deg); opacity: 0; } 60% { transform: scale(.92) rotate(-8deg); opacity: 1; } 100% { transform: scale(1) rotate(-8deg); opacity: 1; } }
