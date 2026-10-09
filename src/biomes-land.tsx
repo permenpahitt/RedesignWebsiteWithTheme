@@ -842,7 +842,7 @@ export function Campfireside({ chest }: { chest: ReactNode }) {
 export function Horizon() {
   return (
     <section id="terhubung" data-biome="terhubung" className="relative overflow-hidden px-5 pt-28 sm:px-8">
-      <div className="pointer-events-none absolute -right-16 bottom-0 aspect-square w-[min(70vw,420px)] translate-y-1/3 rounded-full bg-gradient-to-b from-sun to-coral opacity-90" />
+      <div className="pointer-events-none absolute bottom-24 left-1/2 aspect-square w-[min(90vw,720px)] -translate-x-1/2 translate-y-1/2 rounded-full bg-gradient-to-b from-sun to-coral opacity-90" />
       <div className="relative mx-auto max-w-6xl text-center">
         <p className="font-display text-xs font-extrabold tracking-[.3em] text-navy uppercase">Pos 09 · Cakrawala</p>
         <h2 className="mt-3 font-display text-[clamp(2.8rem,10vw,8rem)] leading-[.85] font-black text-white uppercase" style={{ textShadow: "0 5px 0 #0b1d33" }}>
