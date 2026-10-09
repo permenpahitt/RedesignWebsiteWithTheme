@@ -17,8 +17,6 @@ html { scroll-behavior: smooth; }
 body { background: #0b1d33; color: #0b1d33; font-family: var(--font-sans); overflow-x: hidden; }
 ::selection { background: #ffd93d; color: #0b1d33; }
 :focus-visible { outline: 3px solid #ffd93d; outline-offset: 3px; }
-.custom-cursor, .custom-cursor a, .custom-cursor button { cursor: none; }
-.custom-cursor input, .custom-cursor textarea { cursor: text; }
 
 /* kertas, perforasi, sobekan */
 .paper {

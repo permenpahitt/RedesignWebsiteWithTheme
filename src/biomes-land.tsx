@@ -119,7 +119,9 @@ export function CompassPeak() {
     const move = (e: MouseEvent) => {
       if (pick !== null || !ref.current) return;
       const r = ref.current.getBoundingClientRect();
-      setAngle((Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180) / Math.PI + 90);
+      const target = (Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180) / Math.PI + 90;
+      // ambil jalur terpendek dari sudut sebelumnya, supaya jarum tidak berputar 360° saat melewati batas ±180°
+      setAngle((prev) => prev + ((((target - prev) % 360) + 540) % 360) - 180);
     };
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);

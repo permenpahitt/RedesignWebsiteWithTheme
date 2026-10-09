@@ -218,36 +218,6 @@ function Loader() {
   );
 }
 
-function Cursor() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    let last = { x: 0, y: 0 }, ang = 0;
-    const m = (e: MouseEvent) => {
-      const dx = e.clientX - last.x, dy = e.clientY - last.y;
-      if (Math.abs(dx) + Math.abs(dy) > 3) ang = (Math.atan2(dy, dx) * 180) / Math.PI + 90;
-      last = { x: e.clientX, y: e.clientY };
-      if (ref.current) ref.current.style.transform = `translate(${e.clientX - 16}px, ${e.clientY - 16}px)`;
-      const n = ref.current?.firstElementChild as HTMLElement | null;
-      if (n) n.style.transform = `rotate(${ang}deg)`;
-    };
-    window.addEventListener("mousemove", m);
-    document.documentElement.classList.add("custom-cursor");
-    return () => {
-      window.removeEventListener("mousemove", m);
-      document.documentElement.classList.remove("custom-cursor");
-    };
-  }, []);
-  return (
-    <div ref={ref} className="pointer-events-none fixed top-0 left-0 z-[200] h-8 w-8" aria-hidden="true">
-      <svg viewBox="0 0 32 32" className="h-full w-full transition-transform duration-150">
-        <circle cx="16" cy="16" r="13" fill="#f5e6c8" stroke="#0b1d33" strokeWidth="2.5" />
-        <path d="M16 5 L19 16 L16 18 L13 16Z" fill="#ff6b8a" stroke="#0b1d33" strokeWidth="1.2" />
-        <path d="M16 27 L19 16 L16 14 L13 16Z" fill="#fff" stroke="#0b1d33" strokeWidth="1.2" />
-      </svg>
-    </div>
-  );
-}
-
 const SECRETS = [
   ["Sofiana · Poltekkes Semarang", "believe in your journey"],
   ["Naufal · UNY", "Jangan takut gagal; semisal kamu gagal, teruslah mencoba. Ingat, kamu masih muda dan jalanmu masih panjang. Enjoy your life."],
@@ -266,10 +236,8 @@ export default function App() {
     }
   });
   const [secret, setSecret] = useState(false);
-  const [fine, setFine] = useState(false);
 
   useEffect(() => {
-    setFine(window.matchMedia("(pointer: fine) and (hover: hover)").matches);
     // jeda animasi dekoratif di bagian yang tidak terlihat
     const vis = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle("offscreen", !e.isIntersecting)), { rootMargin: "100px" });
     document.querySelectorAll("main > section").forEach((s) => vis.observe(s));
@@ -302,7 +270,6 @@ export default function App() {
     <ToastProvider>
       <div id="top" className="relative">
         {!reduced && <Loader />}
-        {!reduced && fine && <Cursor />}
         <Sky />
         <Nav found={found.length} />
         <Rail />
