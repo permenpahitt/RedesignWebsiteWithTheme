@@ -842,7 +842,7 @@ export function Campfireside({ chest }: { chest: ReactNode }) {
 export function Horizon() {
   return (
     <section id="terhubung" data-biome="terhubung" className="relative overflow-hidden px-5 pt-28 sm:px-8">
-      <div className="pointer-events-none absolute bottom-24 left-1/2 aspect-square w-[min(90vw,720px)] -translate-x-1/2 translate-y-1/2 rounded-full bg-gradient-to-b from-sun to-coral opacity-90" />
+      <div className="pointer-events-none absolute -right-16 bottom-0 aspect-square w-[min(70vw,420px)] translate-y-1/3 rounded-full bg-gradient-to-b from-sun to-coral opacity-90" />
       <div className="relative mx-auto max-w-6xl text-center">
         <p className="font-display text-xs font-extrabold tracking-[.3em] text-navy uppercase">Pos 09 · Cakrawala</p>
         <h2 className="mt-3 font-display text-[clamp(2.8rem,10vw,8rem)] leading-[.85] font-black text-white uppercase" style={{ textShadow: "0 5px 0 #0b1d33" }}>
@@ -883,14 +883,6 @@ export function Horizon() {
         </a>
       </div>
 
-      {/* garis ombak tipis di horizon matahari, di atas footer */}
-      <div className="pointer-events-none relative mx-auto mt-16 h-20 w-full max-w-7xl" aria-hidden="true">
-        <svg className="h-full w-full" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 22 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0" fill="none" stroke="#0b1d33" strokeWidth="1.5" vectorEffect="non-scaling-stroke" opacity=".45" />
-        <path d="M0 40 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0" fill="none" stroke="#0b1d33" strokeWidth="1.2" vectorEffect="non-scaling-stroke" opacity=".3" />
-        <path d="M0 58 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0" fill="none" stroke="#0b1d33" strokeWidth="1" vectorEffect="non-scaling-stroke" opacity=".2" />
-      </svg>
-      </div>
       <footer className="relative mx-auto mt-6 flex max-w-7xl flex-col items-center gap-3 border-t-2 border-navy/30 py-8 text-center text-sm text-navy sm:flex-row sm:justify-between sm:text-left">
         <div>
           <p className="font-bold">© 2026 Sambandha SMANCA · vBeta</p>
@@ -900,6 +892,14 @@ export function Horizon() {
           <CompassRose className="h-8 w-8 text-navy" /> -7.4974° S, 110.2573° E
         </div>
       </footer>
+      {/* garis ombak tipis di horizon matahari, di bawah koordinat */}
+      <div className="pointer-events-none relative mx-auto h-16 w-full max-w-7xl" aria-hidden="true">
+        <svg className="h-full w-full" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 22 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0 q18.75 -5 37.5 0 q18.75 5 37.5 0" fill="none" stroke="#0b1d33" strokeWidth="1.5" vectorEffect="non-scaling-stroke" opacity=".45" />
+        <path d="M0 40 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0 q18.75 -4 37.5 0 q18.75 4 37.5 0" fill="none" stroke="#0b1d33" strokeWidth="1.2" vectorEffect="non-scaling-stroke" opacity=".3" />
+        <path d="M0 58 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0 q18.75 -3 37.5 0 q18.75 3 37.5 0" fill="none" stroke="#0b1d33" strokeWidth="1" vectorEffect="non-scaling-stroke" opacity=".2" />
+      </svg>
+      </div>
     </section>
   );
 }
