@@ -112,10 +112,10 @@ export function Harbor() {
 
 /* ───────── 2 · LAUT LEPAS ───────── */
 const STAMPS = [
-  { big: String(ALUMNI.length), small: "Navigator Alumni", r: -8, c: "text-coral border-coral" },
-  { big: String(CAMPUSES.length), small: "Kampus Tujuan", r: 5, c: "text-sun border-sun" },
-  { big: "4", small: "Rute Masuk", r: -3, c: "text-white border-white" },
-  { big: "1995", small: "Est. · Candimulyo", r: 9, c: "text-coral border-coral" },
+  { big: String(ALUMNI.length), small: "Navigator Alumni", r: -2, c: "text-coral border-coral" },
+  { big: String(CAMPUSES.length), small: "Kampus Tujuan", r: 1, c: "text-sun border-sun" },
+  { big: "4", small: "Rute Masuk", r: -1, c: "text-white border-white" },
+  { big: "1995", small: "Berdiri · Candimulyo", r: 2, c: "text-coral border-coral" },
 ];
 export function OpenSea() {
   return (
@@ -134,7 +134,7 @@ export function OpenSea() {
                   style={{ transform: `rotate(${s.r}deg)` }}
                 >
                   <div className="grid aspect-square place-items-center rounded-full border-2 border-current p-3 sm:p-6">
-                    <div className="font-display text-3xl font-black sm:text-6xl">{s.big}</div>
+                    <div className={`font-display font-black ${s.big.length > 2 ? "text-2xl sm:text-5xl" : "text-3xl sm:text-6xl"}`}>{s.big}</div>
                     <div className="mt-1 font-display text-[10px] font-extrabold tracking-[.2em] uppercase">{s.small}</div>
                   </div>
                 </div>
