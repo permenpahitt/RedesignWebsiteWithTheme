@@ -308,6 +308,7 @@ function useMobile() {
 }
 function AlumniCard({ a, i }: { a: Alumnus; i: number }) {
   const toast = useToast();
+  const [open, setOpen] = useState(false);
   const c = campusOf(a);
   const copy = async () => {
     let ok = false;
@@ -345,7 +346,16 @@ function AlumniCard({ a, i }: { a: Alumnus; i: number }) {
         {a.fakultas} · {a.jurusan}
       </p>
       {a.status && <p className="mt-1 text-xs font-bold text-coral">{a.status}</p>}
-      {salam && <p className="mt-3 font-hand text-2xl leading-tight text-royal">“{salam}”</p>}
+      {salam && (
+        <div className="mt-3">
+          <p className={`font-hand text-2xl leading-tight text-royal ${!open && salam.length > 140 ? "line-clamp-4" : ""}`}>“{salam}”</p>
+          {salam.length > 140 && (
+            <button onClick={() => setOpen(!open)} aria-expanded={open} className="mt-1 text-xs font-bold text-navy/70 underline underline-offset-2 hover:text-coral">
+              {open ? "Tutup" : "Baca selengkapnya"}
+            </button>
+          )}
+        </div>
+      )}
       <div className="mt-auto pt-4">
         <p className="text-xs break-words text-navy/70">{a.kontak}</p>
         <button onClick={copy} className="mt-2 inline-flex items-center gap-2 rounded-full border-3 border-navy bg-sun px-4 py-1.5 text-sm font-bold transition hover:-translate-y-0.5 hover:bg-coral hover:text-white">

@@ -230,7 +230,9 @@ export default function App() {
   const [found, setFound] = useState<number[]>(() => {
     try {
       const saved = localStorage.getItem("sambandha_keys");
-      return saved ? JSON.parse(saved) : [];
+      const parsed: unknown = saved ? JSON.parse(saved) : [];
+      // buang nilai yang tidak valid (misalnya data lama atau rusak di localStorage)
+      return Array.isArray(parsed) ? parsed.filter((n): n is number => typeof n === "number" && n >= 0 && n < 3) : [];
     } catch {
       return [];
     }
