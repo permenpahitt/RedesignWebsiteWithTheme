@@ -661,23 +661,23 @@ export function Island() {
             <svg viewBox="0 0 300 120" className="absolute bottom-0 w-full" aria-hidden="true">
               <ellipse cx="150" cy="100" rx="140" ry="22" fill="#2e9bd6" stroke="#0b1d33" strokeWidth="4" />
               <path d="M40 98 Q150 30 260 98Z" fill="#f5e6c8" stroke="#0b1d33" strokeWidth="4" />
-              <path d="M200 70 Q210 20 190 0 M200 70 Q230 30 260 30 M200 70 Q170 30 150 34 M200 70 Q220 10 240 6" stroke="#4f9c5a" strokeWidth="7" fill="none" strokeLinecap="round" />
-              <path d="M200 70 L196 40" stroke="#9a5a26" strokeWidth="6" />
+              <path d="M204 76 Q200 52 192 30" stroke="#9a5a26" strokeWidth="6" fill="none" strokeLinecap="round" />
+              <path d="M192 30 Q206 8 226 10 M192 30 Q222 22 244 40 M192 30 Q172 12 152 18 M192 30 Q166 30 152 50 M192 30 Q194 10 186 2" stroke="#4f9c5a" strokeWidth="7" fill="none" strokeLinecap="round" />
             </svg>
             {!sailing ? (
               <button
                 onClick={() => setLetter(true)}
-                className="anim-bob absolute bottom-10 left-8 w-28 -rotate-[25deg] transition hover:scale-110"
+                className="anim-bob absolute bottom-[2%] left-[4%] w-[30%] -rotate-[12deg] transition hover:scale-110"
                 aria-label="Buka botol dan tulis surat"
               >
                 <Bottle className="w-full" />
               </button>
             ) : (
-              <div className="absolute bottom-10 left-8 w-28" style={{ animation: "float-away 2.6s ease-in forwards" }}>
-                <Bottle className="w-full -rotate-[25deg]" />
+              <div className="absolute bottom-[2%] left-[4%] w-[30%] -rotate-[12deg]" style={{ animation: "float-away 2.6s ease-in forwards" }}>
+                <Bottle className="w-full" />
               </div>
             )}
-            <Hand className="absolute -top-2 left-0 -rotate-6 text-sun [text-shadow:0_2px_0_#0b1d33]">{sailing ? "berlayar… 🌊" : "klik botolnya →"}</Hand>
+            <Hand className="absolute bottom-[34%] left-[2%] -rotate-6 text-sun [text-shadow:0_2px_0_#0b1d33]">{sailing ? "berlayar… 🌊" : "klik botolnya ↓"}</Hand>
           </div>
 
           <div>
